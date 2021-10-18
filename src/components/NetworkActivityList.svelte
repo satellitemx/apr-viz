@@ -38,7 +38,7 @@
 
   const handlePaginationUpdate = ({ detail }) => {
     pageSize = detail.pageSize
-    page = detail.page
+    page = 1
   }
 
   $: count = $FilteredNetworkActivities?.length;
