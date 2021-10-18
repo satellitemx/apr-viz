@@ -37,8 +37,10 @@
   let pageSize = 5;
 
   const handlePaginationUpdate = ({ detail }) => {
-    pageSize = detail.pageSize
-    page = 1
+    if (pageSize !== detail.pageSize) {
+      page = 1;
+    }
+    pageSize = detail.pageSize;
   }
 
   $: count = $FilteredNetworkActivities?.length;
